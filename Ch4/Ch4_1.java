@@ -17,10 +17,10 @@ public class Ch4_1 {
 
         val1 = 123.0;
         val2 = 2.0;
-        val3 = val1/ val2; // 浮點樹除法
+        val3 = val1/ val2; // 浮點數除法
         System.out.println(val1 + " / " + val2 + " = " + val3);
 
-        
+
         val3 = val1 / denom;
         System.out.println(val1 + " / " + denom + " = " + val3);
 
