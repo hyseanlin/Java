@@ -22,5 +22,16 @@ public class ForLoopDemo {
         end = 50;
         sum = sum(i, end);
         System.out.println(i + "+2+...+" + end + "=" + sum);
+
+        sum = 0;
+        for (int j=end; j>=i; j--)
+        {
+            int k = j;
+            sum += j;
+        }
+        System.out.println(i + "+2+...+" + end + "=" + sum);
+        System.out.println("j = " + j);
+        System.out.println("k = " + k);
+
     }
 }
