@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Midterm1131_frq3 {
     public static void main(String[] args) {
-        String number="", intLiteral = "-0123456789";
+        String number="", intLiteral = "0123456789";
         
         Scanner scn = new Scanner(System.in);
 
@@ -11,11 +11,16 @@ public class Midterm1131_frq3 {
             System.out.print("請輸入一個整數：");
             number = scn.next();
             isInt = true; // assum it is an integer
-            // if it is not an integer, set isInt to false
+
+            // if it is not an integer, set isInt to false 
             for (int i=0; i<number.length(); i++) {
                 String digit = number.substring(i, i+1);
                 if (intLiteral.indexOf(digit) == -1) {
-                    isInt = false;
+                    if (i==0 && (digit.equals("+") || digit.equals("-"))) {
+                        ; // or continue;
+                    } else {
+                        isInt = false;
+                    }
                 }
             }
         }
