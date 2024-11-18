@@ -1,3 +1,5 @@
+package midterm;
+
 import java.util.Scanner;
 
 public class Midterm1131_frq3 {
