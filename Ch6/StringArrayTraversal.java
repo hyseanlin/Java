@@ -4,6 +4,15 @@ import java.util.Scanner;
 
 public class StringArrayTraversal {
     public static void main(String[] args) {
+        String[] courses = {"C++", "Java", "Python", "R", "C#"}; // initialization list
+
+        for (int i=0; i<courses.length; i++)
+        {
+            System.out.println(courses[i]);
+
+        }
+        
+
         String[] names = new String[5];
 
         Scanner scn = new Scanner(System.in);
@@ -19,6 +28,6 @@ public class StringArrayTraversal {
             System.out.println(names[i]);
         }
 
-        
+
     }
 }

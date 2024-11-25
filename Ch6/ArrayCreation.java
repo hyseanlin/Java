@@ -10,5 +10,7 @@ public class ArrayCreation
         String[] names;
         names = new String[5];
 
+        String[] courses = {"C++", "Java", "Python", "R", "C#"}; // initialization list
+
     }
 }
