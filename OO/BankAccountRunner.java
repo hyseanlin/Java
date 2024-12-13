@@ -10,7 +10,7 @@ public class BankAccountRunner {
 
         System.out.println("示範：存款 2000");
         ba1.deposit(2000);
-        System.out.println(ba1.toString());
+        System.out.println(ba1);
 
         System.out.println("示範：提款 5000");
         ba2.withdraw(5000);
