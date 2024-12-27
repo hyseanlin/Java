@@ -38,20 +38,24 @@ public class PasswordValidator {
         int lc_count=0, uc_count=0, digit_count=0, other_count=0;
         for (int i=0; i<password.length(); i++)
         {
+            // 擷取一個字元，放置於變數 c
             String c = password.substring(i, i+1); // each letter in password
 
+            // 檢查 c 中的字元，是否出現在小寫字元集合中，有出現 indexOf 會回傳大於等於0的數值
             if (LOWER_CASE_CHARS.indexOf(c) >= 0)
                 lc_count++;
 
+            // 檢查 c 中的字元，是否出現在大寫字元集合中，有出現 indexOf 會回傳大於等於0的數值
             if (UPPER_CASE_CHARS.indexOf(c) >= 0)
                 uc_count++;
 
+            // 檢查 c 中的字元，是否出現在數字型字元集合中，有出現 indexOf 會回傳大於等於0的數值
             if (DIGITS.indexOf(c) >= 0)
                 digit_count++;     
 
-            if (LOWER_CASE_CHARS.indexOf(c) == -1 &&
-                    UPPER_CASE_CHARS.indexOf(c) == -1 &&
-                    DIGITS.indexOf(c) == -1)
+            if (LOWER_CASE_CHARS.indexOf(c) == -1 && // c 不是小寫字元(c 沒有出現在小寫字元集合中)
+                    UPPER_CASE_CHARS.indexOf(c) == -1 && // c 不是大寫字元(c 沒有出現在大寫字元集合中)
+                    DIGITS.indexOf(c) == -1) // c 不是數字型字元(c 沒有出現在數字型字元集合中)
                 other_count++;
         }
 
